@@ -92,6 +92,11 @@ const Login = () => {
                   onChange={passwordValidator}
                   onBlur={passwordValidator}
                 />
+                {passwordError && (
+                  <div className="text-xs text-red-500 mt-1">
+                    {passwordError}
+                  </div>
+                )}
               </div>
             </div>
 

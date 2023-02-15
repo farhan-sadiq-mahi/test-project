@@ -10,20 +10,15 @@ const Login = () => {
   const emailValidation = (event) => {
     const regEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     if (event.target.value === "") {
-      console.log("it is mandatory");
       setEmailError("Esse campo é obrigatório");
     } else if (regEx.test(event.target.value)) {
-      console.log("email is valid");
       setEmailError("");
       setEmail(event.target.value);
     } else if (!regEx.test(event.target.value) && event.target.value === "") {
-      console.log("invalid Email");
       setEmailError("O e-mail deve ser válido");
     } else {
-      console.log("invalid email");
       setEmailError("O e-mail deve ser válido");
     }
-    console.log(event.target.value);
   };
 
   const passwordValidator = (event) => {
